@@ -1,0 +1,1 @@
+SELECT * FROM vulnerabilities WHERE PAGE_ID = (SELECT PAGE_ID FROM pages WHERE WEBSITE_ID = (SELECT WEBSITE_ID FROM websites WHERE URL = 'http://foo.com') AND path='/login.html');
